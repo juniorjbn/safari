@@ -1,0 +1,44 @@
+*, body {margin:0;padding:0;}
+
+a {text-decoration:none;outline:none;}
+a:hover {text-decoration:underline;}
+img {border:0;}
+
+ul,li {list-style:none}
+
+fieldset {border:none}
+
+h1,h2,div,p {font:normal 12px Arial, Helvetica, sans-serif;}
+p {padding:0 0 10px 0}
+.cl {clear:both;}
+
+#container {width:100%;margin:0 auto;}
+#top {width:100%;height:130px;background:#000}
+#top div, #main {width:900px;margin:0 auto;}
+#top div #safari {float:left;display:block;width:135px;height:53px;margin:35px 0 0 0;}
+#top div #fio {float:left;display:block;width:1px;height:55px;margin:35px 0 0 45px;}
+#top div h1 {float:left;font-size:36px;color:#FFF;margin:40px 0 0 50px;}
+
+#footer {border-top:1px solid #CCCCCC;float:left;margin:30px 0;padding:10px 10px 5px;width:880px;}
+
+#main {margin-top:40px;}
+#menu {width:180px;float:left;}
+#menu h2 {margin-bottom:5px;font-weight:bold;}
+#menu ul {margin-bottom:30px;padding:0}
+#menu ul li {line-height:22px;}
+#menu ul li a {color:#000;}
+#menu ul li.actv {font-style:italic;color:#FD0F70;}
+
+#content {width:670px;float:left;margin:0;color:#666;}
+
+.tbInfo {margin:30px 0 50px 100px;}
+.tbInfo td {height:20px;border-bottom:1px solid #CCC;padding:12px 10px;font-size:14px}
+.tbInfo td.lf {font-weight:bold;font-size:15px}
+.tbInfo tr.last td {border:none;}
+
+.form {margin:0 0 30px 0;}
+.form .textbox{float:left;border:1px solid #CCC;padding:11px 5px;width:370px;}
+.form div {position:relative;width:191px;height:40px;overflow:hidden;float:left;}
+.form .button {position:absolute;top:0px;background:#EEE;color:#FD0F70;border:1px solid #D3D3D3;font-size:17px;font-style:italic;padding:6px 10px 7px;margin:0 5px;}
+.form .hidden {font-size:45px;position:absolute;right:0px;top:0px;opacity:0;filter:alpha(opacity=0);-ms-filter: "alpha(opacity=0)";-khtml-opacity:0;-moz-opacity:0;width:100px;height:30px;}
+.form .scan {background:url(../img/seta.gif) #F7F7F7 8px 14px no-repeat;color:#666;border:1px solid #E8E8E8;font-size:17px;font-style:italic;padding:6px 10px 7px 25px;}

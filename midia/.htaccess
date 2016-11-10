@@ -1,0 +1,6 @@
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^safari.to$ [OR]
+RewriteCond %{HTTP_HOST} ^www.safari.to$
+RewriteRule (.*)$ http://stage.safari.to/midia/$1 [R=301,L]

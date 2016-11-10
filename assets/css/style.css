@@ -1,0 +1,993 @@
+/* HTML5 ✰ Boilerplate
+/* ==!== font embed ========================================================= */
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue'), local('HelveticaNeue'), url('../fonts/helveticaltstd-roman-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Helvetica Neue Bold'), local('HelveticaNeue-Bold'), url('../fonts/helveticaltstd-bold-webfont.woff') format('woff');
+}
+
+/*
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-family: ; font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: 'Helvetica Neue', sans-serif; color: #222; }
+
+::-moz-selection { background: #000; color: #fff; text-shadow: none; }
+::selection { background: #000; color: #fff; text-shadow: none; }
+
+a { color: #00e; outline: 0!important;}
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+/* ==|== primary styles ===================================================== */
+html { background-color: #000; }
+
+.content-wrapper { margin: 0 auto; overflow: hidden; width: 960px;}
+
+.ir { background-image: url(../img/sprite.png); }
+
+.title { color: #666; font-family: Times; font-style: italic; font-size: 18px; font-weight: normal; }
+
+.bullet { background-position: -200px -273px; display: inline-block!important; height: 9px; margin: 0 5px 2px 0; width: 12px; }
+
+.bullet.black { background-position: -212px -269px; }
+
+.grid-0 { width: 120px; }
+.grid-1 { width: 240px; }
+.grid-2 { width: 480px; }
+.grid-3 { width: 720px; }
+.grid-4 { width: 960px; }
+
+/* ==!== header ========= */
+header { background: #000; overflow: hidden; padding: 10px 0 30px;width:960px;margin:0 auto;}
+h1 { margin: 0; }
+h1 a { background-position: -312px -244px; float: left; height: 53px; width: 135px; }
+
+header nav.language { height: 20px; margin: 0 auto; overflow: hidden; visibility: hidden; width: 960px;}
+header nav.language ul { float: right; overflow: hidden; }
+header nav.language ul li { float: left; margin: 0 0 0 9px; }
+header nav.language ul li a { color: #666; font-size: 12px; text-decoration: none; }
+header nav.language ul li a.active { color: #999; }
+header nav.language ul li a:visited { color: #666; }
+header nav.language ul li a:hover { color: #fff; }
+
+header nav.site { height: 53px; overflow: hidden; }
+header nav.site ul { border-bottom: 1px solid #282828; float: right; overflow: hidden; padding: 20px 0 6px; }
+header nav.site ul li { float: left; margin-right: 60px; text-transform: uppercase; }
+header nav.site ul li.contact{ margin-right: 0; }
+header nav.site ul li a { color: #666; font-size: 12px; text-decoration: none; }
+header nav.site ul li a.active { color: #fff; }
+header nav.site ul li a.active:visited { color: #fff; }
+header nav.site ul li a:visited { color: #666; }
+header nav.site ul li a:hover { color: #fff; }
+
+header #banners {position: relative; height: 346px; }
+header #banners .banner { text-align: right; padding: 40px 300px 10px 0; height: 262px; width: 660px; position: absolute; top: 0; left: 0; display: none;}
+header #banners .banner h2 { color: #fff; line-height: 0.9em;  }
+header #banners .banner a { color: #666; font-family: Times; font-style: italic; font-size: 20px; font-weight: normal; text-decoration: none; }
+header #banners .banner a:hover { color: #fff; }
+header #banners .banner.active { display: block; }
+
+header #banners .type-01, header #banners .type-04, header #banners .type-07, header #banners .type-010  { background: url(../img/banner-type-01.jpg) bottom right no-repeat;  }
+header #banners .type-02,header #banners .type-05, header #banners .type-08  { background: url(../img/banner-type-02.jpg) bottom right no-repeat; }
+header #banners .type-03,header #banners .type-06, header #banners .type-09   { background: url(../img/banner-type-03.jpg) bottom right no-repeat; }
+header #banners h2 { font-size: 90px; letter-spacing: -1px;  }
+header #banners #banner-01 h2 { font-size: 76px; margin: 24px 0 0; }
+header #banners #banner-02 h2 { font-size: 72px; margin: 30px 0 0; }
+header #banners #banner-03 h2 { font-size: 65px; margin: 48px 0 0; }
+header #banners #banner-04 h2 { font-size: 84px; margin: 14px 0 0; }
+header #banners #banner-05 h2 { letter-spacing: -2px; margin: 50px 0 0;}
+header #banners #banner-06 h2 { font-size: 72px; margin: 38px 0 0; }
+header #banners #banner-07 h2 { font-size: 72px; margin: 34px 0 0; }
+header #banners #banner-08 h2 { font-size: 78px; margin: 24px 0 0; }
+header #banners #banner-09 h2 { font-size: 66px; margin: 42px 0 0; }
+header #banners #banner-10 h2 { font-size: 66px; margin: 58px 0 0;}
+
+
+
+
+/* ==!== footer ========= */
+footer { background: #000; padding-top: 30px;width:960px;margin:0 auto; }
+footer ul { margin: 0; }
+
+footer nav { float: left; height: 30px; overflow: hidden; }
+footer nav ul { float: left; overflow: hidden; padding-top: 8px; }
+footer nav ul li { float: left; margin-right: 60px; text-transform: uppercase; }
+footer nav ul li:last-child { margin-right: 0; }
+footer nav ul li a { color: #666; font-size: 12px; text-decoration: none; }
+footer nav ul li a.active {color: #FFFFFF;}
+footer nav ul li a:visited { color: #666; }
+footer nav ul li a:hover { color: #fff; }
+footer nav ul li a.active {color: #FFFFFF;}
+
+footer aside { float: left; overflow: hidden; }
+footer aside nav { float: right; overflow: hidden; }
+footer aside nav ul { padding: 0; float: left; overflow: hidden; }
+footer aside nav ul li { float: left; margin-right: 10px; }
+footer aside nav ul li:last-child { margin-right: 0; }
+footer aside nav ul li a { height: 30px; width: 30px; }
+
+footer aside nav ul li a.linkedin { background-position: 0 -244px; }
+footer aside nav ul li a.linkedin:hover { background-position: 0 -274px; }
+footer aside nav ul li a.flickr { background-position: -30px -244px; }
+footer aside nav ul li a.flickr:hover { background-position: -30px -274px; }
+footer aside nav ul li a.twitter { background-position: -60px -244px; }
+footer aside nav ul li a.twitter:hover { background-position: -60px -274px; }
+footer aside nav ul li a.facebook { background-position: -90px -244px; }
+footer aside nav ul li a.facebook:hover { background-position: -90px -274px; }
+footer aside nav ul li a.google { background-position: -120px -244px; }
+footer aside nav ul li a.google:hover { background-position: -120px -274px; }
+
+footer address { border-top: 1px solid #282828; float: left; font-style: normal; margin-top: 30px; padding-top: 30px; }
+footer address p.copyright { color: #666; float: left; font-size: 11px;}
+footer address p.mail {color: #cccccc; float: right; font-size: 11px;}
+footer address p.mail a {color: #cccccc;}
+footer address ul { float: left; list-style: none; margin: 0; width: 100%; overflow: hidden; padding: 0; }
+footer address ul li { float: left; height: 81px; margin: 0 0 45px 100px; width: auto; }
+footer address ul li.first { margin-left: 0; }
+footer address ul li.last { border: none; width: 105px; }
+footer address ul li h1 { color: #fff; font-size: 18px; font-weight: normal; margin: 0 0 3px; }
+footer address ul li h2 { color: #EDEDED; font-size: 12px; font-weight: normal; margin: 0 0 3px; }
+footer address ul li span { display: block; color: #999; font-size: 11px; font-weight: bold; margin: 0; }
+footer address a { color: #999; font-family: Arial, sans-serif;  font-size: 11px; text-decoration: none; }
+  footer address a:visited { color: #999 !important; }
+footer address a:hover { color: #fff !important; }
+
+/* ==!== main general ========= */
+#main { background: #fff; margin:0 auto;width:100%}
+
+#main h2 { margin: 30px 0 15px; }
+#main.home h2 { margin: 30px 0 52px;}
+#main.clients h2 { margin: 30px 0 8px;}
+/* ==!== counters content========= */
+
+#counter { background-color: #f5f5f5; display: none; padding: 0 0 30px; }
+#counter h2 { margin: 30px 0 0; }
+#counter ul { height: 72px; list-style: none; margin: 30px 0 0; overflow: hidden; padding: 0; }
+#counter ul li { border-right: 1px solid #dcdcdc; color: #939393; float: left; line-height: 1.5em; padding: 0 30px; text-transform: uppercase; width: 194px; }
+
+#counter ul li.first { padding-left: 0; }
+#counter ul li.last { border: 0; padding-right: 0; }
+
+#counter ul li span { float: left; height: 72px; margin-right: 5px; width: 72px; }
+#counter ul li b { font-size: 27px; }
+#counter ul li strong { }
+
+#counter ul li.tumblr { font-size: 15px; }
+#counter ul li.tumblr span { background-position: -492px 0; }
+#counter ul li.tumblr b { font-size: 31px; }
+#counter ul li.tumblr strong { color: #01aef0; font-size: 27px; }
+
+#counter ul li.google { font-size: 16px; }
+#counter ul li.google span { background-position: -492px -72px; }
+#counter ul li.google b { color: #4bab46; }
+#counter ul li.google strong { font-size: 27px; line-height: 0.7em; }
+
+#counter ul li.iphone { font-size: 16px; }
+#counter ul li.iphone span { background-position: -492px -144px; }
+#counter ul li.iphone b { font-size: 31px; }
+#counter ul li.iphone strong { color: #fc0; font-size: 17px; }
+
+#counter ul li.facebook { font-size: 15px; }
+#counter ul li.facebook span { background-position: -492px -216px; }
+#counter ul li.facebook b { color: #f12787; }
+#counter ul li.facebook strong { font-size: 20px; }
+
+/* ==!== home content ======= */
+#main.home { }
+#main.home .services {background:#fff}
+#main.home .services ul { list-style: none; margin: 0 0 50px; overflow: hidden; padding: 0; }
+#main.home .services ul li { float: left; height: 210px; position: relative; cursor: pointer; }
+#main.home .services ul li span.geral {width: 240px; height: 210px; display: block;}
+#main.home .services ul li a { height: 121px; margin: 0 auto; overflow: initial; text-decoration: none; width: 121px; }
+#main.home .services ul li a span { bottom: 31px; color: #3e3e3e; display: block; font-size: 32px; font-weight: bold; left: 0; position: absolute; text-align: center; text-indent: 0; width: 240px; }
+#main.home .services ul li a small { bottom: 4px; height: 16px; left: 50%; margin-left: -8px; position: absolute; width: 16px; }
+
+#main.home .services ul li.disabled span{ color: #ccc; }
+
+
+#main.home .services ul li.pink a  { background: url(../img/sprite-hover.png) no-repeat 0 -122px transparent;}
+#main.home .services ul li.pink a small { background-position: -232px -248px; }
+#main.home .services ul li.pink.selected small { background-position: -196px -300px!important; }
+#main.home .services ul li.pink.over small { background: url(../img/sprite-hover-2.png) no-repeat -496px -122px transparent;}
+#main.home .services ul li.pink.disabled a, #main.home .services ul li.pink .disabled a { background: url(../img/sprite.png) no-repeat 0 -122px transparent; }
+#main.home .services ul li.pink.over a { background: url(../img/sprite-hover-2.png) no-repeat 0 -122px transparent !important; }
+
+
+#main.home .services ul li.yellow a { background: url(../img/sprite-hover.png) no-repeat -121px -122px transparent;}
+#main.home .services ul li.yellow a small { background-position: -216px -248px; }
+#main.home .services ul li.yellow.selected small { background-position: -237px -300px!important; }
+#main.home .services ul li.yellow.over small { background: url(../img/sprite-hover-2.png) no-repeat -496px -156px transparent !important; }
+#main.home .services ul li.yellow.disabled a, #main.home .services ul li.yellow .disabled a { background: url(../img/sprite.png) no-repeat -121px -122px transparent; }
+#main.home .services ul li.yellow.over a { background: url(../img/sprite-hover-2.png) no-repeat -121px -122px transparent; }
+
+
+
+#main.home .services ul li.blue a { background: url(../img/sprite-hover.png) no-repeat -243px -122px;  transparent; }
+#main.home .services ul li.blue a small { background-position: -200px -248px; }
+#main.home .services ul li.blue.selected small { background-position: -216px -300px!important; }
+#main.home .services ul li.blue.over small { background: url(../img/sprite-hover-2.png) no-repeat -496px -174px transparent !important; }
+#main.home .services ul li.blue.disabled a, #main.home .services ul li.blue .disabled a { background: url(../img/sprite.png) no-repeat -243px -122px transparent; }
+#main.home .services ul li.blue.over a { background: url(../img/sprite-hover-2.png) no-repeat -243px -122px transparent; }
+
+
+
+#main.home .services ul li.green a { background: url(../img/sprite-hover.png) no-repeat -365px -122px;  transparent;}
+#main.home .services ul li.green a small { background-position: -248px -248px; }
+#main.home .services ul li.green.selected small { background-position: -258px -300px!important;}
+#main.home .services ul li.green.over small { background: url(../img/sprite-hover-2.png) no-repeat -496px -139px transparent; }
+#main.home .services ul li.green.disabled a, #main.home .services ul li.green .disabled a { background: url(../img/sprite.png) no-repeat -365px -122px;  transparent;  }
+#main.home .services ul li.green.over a { background: url(../img/sprite-hover-2.png) no-repeat -365px -122px transparent !important; }
+
+
+#main.home .services ul li.green.disabled a, 
+#main.home .services ul li.green .disabled a,
+#main.home .services ul li.green.over a,
+#main.home .services ul li.blue.disabled a, 
+#main.home .services ul li.blue .disabled a
+#main.home .services ul li.blue.over a,
+#main.home .services ul li.yellow.disabled a, 
+#main.home .services ul li.yellow .disabled a,
+#main.home .services ul li.yellow.over a,
+#main.home .services ul li.pink.disabled a, 
+#main.home .services ul li.pink .disabled a,
+#main.home .services ul li.pink.over a {
+	-webkit-transition: all 0.3s linear;
+		-moz-transition: all 0.3s linear;
+		-o-transition: all 0.3s linear;
+		transition: all 0.3s linear;
+	}
+#main.home .services ul li.disabled a small, #main.home .services ul li .disabled a small,
+#main.home .services ul li.selected small { background-position: -264px -244px; bottom: 0px; height: 24px; margin-left: -12px; width: 24px; }
+
+
+
+#main.home .brief { display: none; padding-bottom: 30px; }
+#main.home .brief p { color: #a1a1a1; font-family: Times; font-style: italic; font-size: 20px; font-weight: normal; margin: 0 0 30px; }
+#main.home .brief a { color: #3e3e3e; font-family: Times; font-style: italic; font-size: 20px; font-weight: normal; text-decoration: none; }
+#main.home .brief a:hover { color: #ccc; }
+
+#main.home .clients { border-top: 1px solid #333333; overflow: visible;background:#fff; }
+
+#main.home .clients h2 { background: #333333; color: #999; float: left; margin: 0; padding: 0 15px 2px; }
+#main.home .clients .scroller { height: ; overflow: hidden; }
+#main.home .clients menu { display: block; width: 74px; height: 25px; background: white; position: relative; float: right; top: -1px; padding: 0; margin: 0 0 0; z-index: 9999; }
+#main.home .clients menu ul { display: block; width: 61px; height: inherit; position: relative; margin: 0; float: right; }
+#main.home .clients menu ul li { height: 25px; background: transparent; position: relative; float: left; margin: 0; }
+#main.home .clients menu ul li a { display: block; width: 25px; height: 24px; background: url(../img/sprite.png) no-repeat; position: relative; top: 0px; cursor: pointer;}
+#main.home .clients menu a.left-pointer { background-position: -150px -244px; margin: 0 9px 0 0; }
+#main.home .clients menu a.left-pointer:hover { background-position: -150px -268px; }
+#main.home .clients menu a.right-pointer { background-position: -175px -244px; margin: 0; }
+#main.home .clients menu a.right-pointer:hover { background-position: -175px -268px; }
+#main.home .clients ul { list-style: none; margin: 30px 0 35px; padding: 0; width: 3018px; position: relative; float: left; left: 0px; }
+#main.home .clients ul li { float: left; height: 110px; margin: 0;}
+#main.home .clients ul li.wrap {margin: 0 1px 0 0; }
+#main.home .agencies ul li a { display: block; height: 110px; width: 137px; float: left; background: url(../img/sprite-agency.png) no-repeat; cursor: default; }
+
+#main.home .agencies ul li a#africa { background-position: 0 -120px; }
+#main.home .agencies ul li a#borguierh { background-position:  -137px -120px; }
+#main.home .agencies ul li a#ogilvy { background-position:  -274px -120px; }
+#main.home .agencies ul li a#almap { background-position:  -411px -120px; }
+#main.home .agencies ul li a#wunderman { background-position:  -548px -120px; }
+#main.home .agencies ul li a#fbiz { background-position:  -685px -120px; }
+#main.home .agencies ul li a#wmccann { background-position:  -822px -120px; }
+#main.home .agencies ul li a#redant { background-position:  -959px -120px; }
+#main.home .agencies ul li a#fnazca { background-position:  -1096px -120px; }
+#main.home .agencies ul li a#ag2 { background-position:  -1233px -120px; }
+#main.home .agencies ul li a#latin { background-position:  0 -360px; }
+#main.home .agencies ul li a#cheil { background-position:  -137px -360px; }
+#main.home .agencies ul li a#w3haus { background-position:  -274px -360px; }
+#main.home .agencies ul li a#fischer { background-position:  -411px -360px; }
+#main.home .agencies ul li a#talent { background-position:  -548px -360px; }
+#main.home .agencies ul li a#live { background-position:  -685px -360px; }
+#main.home .agencies ul li a#dm9{ background-position: -822px -360px; }
+#main.home .agencies ul li a#agenciaclick { background-position:  -959px -360px; }
+#main.home .agencies ul li a#propeg { background-position:  -1096px -360px; }
+#main.home .agencies ul li a#grupotv1 { background-position:  -1233px -360px; }
+#main.home .agencies ul li a#b4i { background-position:  0 -600px; }
+#main.home .agencies ul li a#um { background-position:  -137px -600px; }
+
+#main.home .agencies ul li a#africa:hover { background-position: 0 0; }
+#main.home .agencies ul li a#borguierh:hover { background-position:  -137px 0px; }
+#main.home .agencies ul li a#ogilvy:hover { background-position:  -274px 0px; }
+#main.home .agencies ul li a#almap:hover { background-position:  -411px 0px; }
+#main.home .agencies ul li a#wunderman:hover { background-position:  -548px 0px; }
+#main.home .agencies ul li a#fbiz:hover { background-position:  -685px 0px; }
+#main.home .agencies ul li a#wmccann:hover { background-position:  -822px 0px; }
+#main.home .agencies ul li a#redant:hover { background-position:  -959px 0px; }
+#main.home .agencies ul li a#fnazca:hover { background-position:  -1096px 0px; }
+#main.home .agencies ul li a#ag2:hover { background-position:  -1233px 0px; }
+#main.home .agencies ul li a#latin:hover { background-position:  0 -240px; }
+#main.home .agencies ul li a#cheil:hover { background-position:  -137px -240px; }
+#main.home .agencies ul li a#w3haus:hover { background-position:  -274px -240px; }
+#main.home .agencies ul li a#fischer:hover { background-position:  -411px -240px; }
+#main.home .agencies ul li a#talent:hover { background-position:  -548px -240px; }
+#main.home .agencies ul li a#live:hover { background-position:  -685px -240px; }
+#main.home .agencies ul li a#dm9:hover{ background-position: -822px -240px; }
+#main.home .agencies ul li a#agenciaclick:hover { background-position:  -959px -240px; }
+#main.home .agencies ul li a#propeg:hover { background-position:  -1096px -240px; }
+#main.home .agencies ul li a#grupotv1:hover { background-position:  -1233px -240px; }
+#main.home .agencies ul li a#b4i:hover { background-position:  0 -480px; }
+#main.home .agencies ul li a#um:hover { background-position:  -137px -480px; }
+
+#main.home .brands ul li a { display: block; height: 110px; width: 137px; float: left; background: url(../img/sprite-client.png) no-repeat; cursor: default; }
+#main.home .brands ul {width:10824px;}
+
+#main.home .brands ul li a#peg { background-position: 0 -120px; }
+#main.home .brands ul li a#hp { background-position: -137px -120px; }
+#main.home .brands ul li a#fiat { background-position: -274px -120px; }
+#main.home .brands ul li a#samsung { background-position: -411px -120px; }
+#main.home .brands ul li a#gatorade { background-position: -548px -120px; }
+#main.home .brands ul li a#unilever { background-position: -685px -120px; }
+#main.home .brands ul li a#ford { background-position: -822px -120px; }
+#main.home .brands ul li a#mastercard { background-position: -959px -120px; }
+#main.home .brands ul li a#bradesco { background-position: -1096px -120px; }
+#main.home .brands ul li a#stellaartois { background-position: -1233px -120px; }
+#main.home .brands ul li a#microsoft { background-position: 0 -360px; }
+#main.home .brands ul li a#smirnoff { background-position: -137px -360px; }
+#main.home .brands ul li a#centrum { background-position: -274px -360px; }
+#main.home .brands ul li a#pfizer { background-position: -411px -360px; }
+#main.home .brands ul li a#chevrolet { background-position: -548px -360px; }
+#main.home .brands ul li a#clear { background-position: -685px -360px; }
+#main.home .brands ul li a#credicard { background-position: -822px -360px; }
+#main.home .brands ul li a#heineken { background-position: -959px -360px; }
+#main.home .brands ul li a#lg { background-position: -1096px -360px; }
+#main.home .brands ul li a#converse { background-position: -1233px -360px; }
+#main.home .brands ul li a#johnnie { background-position: 0 -600px; }
+#main.home .brands ul li a#diageo { background-position: -137px -600px; }
+#main.home .brands ul li a#redbull { background-position: -274px -600px; }
+#main.home .brands ul li a#reebok { background-position: -411px -600px; }
+#main.home .brands ul li a#embratel { background-position: -548px -600px; }
+#main.home .brands ul li a#msn { background-position: -685px -600px; }
+#main.home .brands ul li a#loreal { background-position: -822px -600px; }
+#main.home .brands ul li a#air-asia { background-position: -959px -600px; }
+#main.home .brands ul li a#visa { background-position: -1096px -600px; }
+#main.home .brands ul li a#swatch { background-position: -1233px -600px; }
+#main.home .brands ul li a#asics { background-position: 0 -840px; }
+#main.home .brands ul li a#bic { background-position: -137px -840px; }
+#main.home .brands ul li a#santander { background-position: -274px -840px; }
+#main.home .brands ul li a#ades { background-position: -411px -840px; }
+#main.home .brands ul li a#colgate { background-position: -548px -840px; }
+#main.home .brands ul li a#dove { background-position: -685px -840px; }
+#main.home .brands ul li a#iguatemi { background-position: -822px -840px; }
+#main.home .brands ul li a#kibon { background-position: -959px -840px; }
+#main.home .brands ul li a#lacta { background-position: -1096px -840px; }
+#main.home .brands ul li a#rbs { background-position: -1233px -840px; }
+#main.home .brands ul li a#lifebuoy { background-position: 0 -1080px; }
+#main.home .brands ul li a#lola { background-position: -137px -1080px; }
+#main.home .brands ul li a#activia { background-position: -274px -1080px; }
+#main.home .brands ul li a#bovap { background-position: -411px -1080px; }
+#main.home .brands ul li a#advil { background-position: -548px -1080px; }
+#main.home .brands ul li a#buscape { background-position: -685px -1080px; }
+#main.home .brands ul li a#nextel { background-position: -822px -1080px; }
+#main.home .brands ul li a#olympikus { background-position: -959px -1080px; }
+#main.home .brands ul li a#brahma { background-position: -1096px -1080px; }
+#main.home .brands ul li a#pantene { background-position: -1233px -1080px; }
+#main.home .brands ul li a#fei { background-position: 0 -1320px; }
+#main.home .brands ul li a#conchay { background-position: -137px -1320px; }
+#main.home .brands ul li a#doriana { background-position: -274px -1320px; }
+#main.home .brands ul li a#cepacol { background-position: -411px -1320px; }
+#main.home .brands ul li a#royal { background-position: -548px -1320px; }
+#main.home .brands ul li a#rubbermeid { background-position: -685px -1320px; }
+#main.home .brands ul li a#graco { background-position: -822px -1320px; }
+#main.home .brands ul li a#sbt { background-position: -959px -1320px; }
+#main.home .brands ul li a#senac { background-position: -1096px -1320px; }
+#main.home .brands ul li a#skol { background-position: -1233px -1320px; }
+#main.home .brands ul li a#caixa { background-position: 0 -1560px; }
+#main.home .brands ul li a#sonhodevalsa { background-position: -137px -1560px; }
+#main.home .brands ul li a#sorriso { background-position: -274px -1560px; }
+#main.home .brands ul li a#gruporbs { background-position: -411px -1560px; }
+#main.home .brands ul li a#gnt { background-position: -548px -1560px; }
+#main.home .brands ul li a#turmadamonica { background-position: -685px -1560px; }
+#main.home .brands ul li a#azaleia { background-position: -822px -1560px; }
+#main.home .brands ul li a#unisinos { background-position: -959px -1560px; }
+#main.home .brands ul li a#veja { background-position: -1096px -1560px; }
+#main.home .brands ul li a#vivo { background-position: -1233px -1560px; }
+#main.home .brands ul li a#boticario { background-position: 0px -1800px; }
+#main.home .brands ul li a#apex { background-position: -137px -1800px; }
+#main.home .brands ul li a#gol { background-position: -274px -1800px; }
+#main.home .brands ul li a#folha { background-position: -411px -1800px; }
+#main.home .brands ul li a#pomarola { background-position: -548px -1800px; }
+#main.home .brands ul li a#gossip-girl { background-position: -685px -1800px; }
+#main.home .brands ul li a#vono { background-position: -822px -1800px; }
+#main.home .brands ul li a#clube { background-position: -959px -1800px; }
+
+#main.home .brands ul li a#peg:hover { background-position: 0 0; }
+#main.home .brands ul li a#hp:hover { background-position: -137px 0; }
+#main.home .brands ul li a#fiat:hover { background-position: -274px 0; }
+#main.home .brands ul li a#samsung:hover { background-position: -411px 0; }
+#main.home .brands ul li a#gatorade:hover { background-position: -548px 0; }
+#main.home .brands ul li a#unilever:hover { background-position: -685px 0; }
+#main.home .brands ul li a#ford:hover { background-position: -822px 0; }
+#main.home .brands ul li a#mastercard:hover { background-position: -959px 0; }
+#main.home .brands ul li a#bradesco:hover { background-position: -1096px 0; }
+#main.home .brands ul li a#stellaartois:hover { background-position: -1233px 0; }
+#main.home .brands ul li a#microsoft:hover { background-position: 0 -240px; }
+#main.home .brands ul li a#smirnoff:hover { background-position: -137px -240px; }
+#main.home .brands ul li a#centrum:hover { background-position: -274px -240px; }
+#main.home .brands ul li a#pfizer:hover { background-position: -411px -240px; }
+#main.home .brands ul li a#chevrolet:hover { background-position: -548px -240px; }
+#main.home .brands ul li a#clear:hover { background-position: -685px -240px; }
+#main.home .brands ul li a#credicard:hover { background-position: -822px -240px; }
+#main.home .brands ul li a#heineken:hover { background-position: -959px -240px; }
+#main.home .brands ul li a#lg:hover { background-position: -1096px -240px; }
+#main.home .brands ul li a#converse:hover { background-position: -1233px -240px; }
+#main.home .brands ul li a#johnnie:hover { background-position: 0 -480px; }
+#main.home .brands ul li a#diageo:hover { background-position: -137px -480px; }
+#main.home .brands ul li a#redbull:hover { background-position: -274px -480px; }
+#main.home .brands ul li a#reebok:hover { background-position: -411px -480px; }
+#main.home .brands ul li a#embratel:hover { background-position: -548px -480px; }
+#main.home .brands ul li a#msn:hover { background-position: -685px -480px; }
+#main.home .brands ul li a#loreal:hover { background-position: -822px -480px; }
+#main.home .brands ul li a#air-asia:hover { background-position: -959px -480px; }
+#main.home .brands ul li a#visa:hover { background-position: -1096px -480px; }
+#main.home .brands ul li a#swatch:hover { background-position: -1233px -480px; }
+#main.home .brands ul li a#asics:hover { background-position: 0 -720px; }
+#main.home .brands ul li a#bic:hover { background-position: -137px -720px; }
+#main.home .brands ul li a#santander:hover { background-position: -274px -720px; }
+#main.home .brands ul li a#ades:hover { background-position: -411px -720px; }
+#main.home .brands ul li a#colgate:hover { background-position: -548px -720px; }
+#main.home .brands ul li a#dove:hover { background-position: -685px -720px; }
+#main.home .brands ul li a#iguatemi:hover { background-position: -822px -720px; }
+#main.home .brands ul li a#kibon:hover { background-position: -959px -720px; }
+#main.home .brands ul li a#lacta:hover { background-position: -1096px -720px; }
+#main.home .brands ul li a#rbs:hover { background-position: -1233px -720px; }
+#main.home .brands ul li a#lifebuoy:hover { background-position: 0 -960px; }
+#main.home .brands ul li a#lola:hover { background-position: -137px -960px; }
+#main.home .brands ul li a#activia:hover { background-position: -274px -960px; }
+#main.home .brands ul li a#bovap:hover { background-position: -411px -960px; }
+#main.home .brands ul li a#advil:hover { background-position: -548px -960px; }
+#main.home .brands ul li a#buscape:hover { background-position: -685px -960px; }
+#main.home .brands ul li a#nextel:hover { background-position: -822px -960px; }
+#main.home .brands ul li a#olympikus:hover { background-position: -959px -960px; }
+#main.home .brands ul li a#brahma:hover { background-position: -1096px -960px; }
+#main.home .brands ul li a#pantene:hover { background-position: -1233px -960px; }
+#main.home .brands ul li a#fei:hover { background-position: 0 -1200px; }
+#main.home .brands ul li a#conchay:hover { background-position: -137px -1200px; }
+#main.home .brands ul li a#doriana:hover { background-position: -274px -1200px; }
+#main.home .brands ul li a#cepacol:hover { background-position: -411px -1200px; }
+#main.home .brands ul li a#royal:hover { background-position: -548px -1200px; }
+#main.home .brands ul li a#rubbermeid:hover { background-position: -685px -1200px; }
+#main.home .brands ul li a#graco:hover { background-position: -822px -1200px; }
+#main.home .brands ul li a#sbt:hover { background-position: -959px -1200px; }
+#main.home .brands ul li a#senac:hover { background-position: -1096px -1200px; }
+#main.home .brands ul li a#skol:hover { background-position: -1233px -1200px; }
+#main.home .brands ul li a#caixa:hover { background-position: 0 -1440px; }
+#main.home .brands ul li a#sonhodevalsa:hover { background-position: -137px -1440px; }
+#main.home .brands ul li a#sorriso:hover { background-position: -274px -1440px; }
+#main.home .brands ul li a#gruporbs:hover { background-position: -411px -1440px; }
+#main.home .brands ul li a#gnt:hover { background-position: -548px -1440px; }
+#main.home .brands ul li a#turmadamonica:hover { background-position: -685px -1440px; }
+#main.home .brands ul li a#azaleia:hover { background-position: -822px -1440px; }
+#main.home .brands ul li a#unisinos:hover { background-position: -959px -1440px; }
+#main.home .brands ul li a#veja:hover { background-position: -1096px -1440px; }
+#main.home .brands ul li a#vivo:hover { background-position: -1233px -1440px; }
+#main.home .brands ul li a#boticario:hover { background-position: 0px -1680px; }
+#main.home .brands ul li a#apex:hover { background-position: -137px -1680px; }
+#main.home .brands ul li a#gol:hover { background-position: -274px -1680px; }
+#main.home .brands ul li a#folha:hover { background-position: -411px -1680px; }
+#main.home .brands ul li a#pomarola:hover { background-position: -548px -1680px; }
+#main.home .brands ul li a#gossip-girl:hover { background-position: -685px -1680px; }
+#main.home .brands ul li a#vono:hover { background-position: -822px -1680px; }
+#main.home .brands ul li a#clube:hover { background-position: -959px -1680px; }
+
+
+/* ==!== services content ======= */
+
+#main.services { padding-bottom: 30px; }
+#main.services h2 { margin: 30px 0 15px; }
+#main.services .tagline { display: block; width: 100%; padding: 0 0 40px; border-bottom: 1px solid #CCC; font-weight: bold; font-size: 50px; letter-spacing: -2px; line-height: 50px; position: relative; margin: 0; }
+
+#main.services .service { display: block; position: relative; float: left; padding: 20px 0 0; margin: 30px 0 0; }
+
+#main.services .service span { display: block; width: 121px; height: 121px; background: url(../img/sprite.png) no-repeat; position: relative; float: left; margin: 0 30px 0 0; }
+#main.services .service span.pink { background-position: 0 0; }
+#main.services .service span.yellow { background-position: -121px 0; }
+#main.services .service span.blue { background-position: -244px 0; }
+#main.services .service span.green { background-position: -365px 0; }
+#main.services .service h3 { display: block; color: #3E3E3E; font-size: 36px; line-height: 31px; position: relative; float: left; margin: 0 0 22px; }
+#main.services .service p {display:block;width:808px;color:#a1a1a1;font-family:Times;font-style:italic;font-weight:normal;font-size:20px;position:relative;float:left;margin:0 0 30px;}
+
+#main.services .service menu { display: block; width: 808px; padding: 0; position: relative; float: left; margin: 0 0 20px 150px; }
+#main.services .service menu ul { display: block; padding: 0; list-style: none; position: relative; float: left; margin: 0; }
+#main.services .service menu li { display: block; height: 17px; padding: 3px 20px 0; border-right: 1px solid #ccc; position: relative; float: left; }
+#main.services .service menu li.first { padding: 3px 20px 0 0; }
+#main.services .service menu li.last { padding: 3px 0 0 20px; border: none; }
+#main.services .service menu a { display: block; color: #3E3E3E; font-size: 14px; line-height: 13px; text-decoration: none; }
+
+#main.services #media.service menu a:hover { color: #f12787; }
+#main.services #media.service menu a.active { color: #f12787; }
+#main.services #technology.service menu a:hover { color: #FFCC00; }
+#main.services #technology.service menu a.active { color: #FFCC00; }
+#main.services #creative.service menu a:hover { color: #01AEF0; }
+#main.services #creative.service menu a.active { color: #01AEF0; }
+#main.services #social.service menu a:hover { color: #3FA639; }
+#main.services #social.service menu a.active { color: #3FA639; }
+
+#main.services .service .brief { display: none; width: 808px; margin: 0 0 0 150px; position: relative; float: left; }
+#main.services .service .brief.active { display: block; }
+#main.services .service .brief h4 { display: block; color: #3E3E3E; font-size: 24px; position: relative; float: left; margin: 0 0 18px; }
+#main.services .service .brief p { display: block; font-size: 16px; position: relative; float: left; margin: 0 0 25px; }
+#main.services .service .brief ul { display: block; width: 33%; padding: 0; list-style: none; position: relative; float: left; margin: 0; }
+#main.services .service .brief li { color: #9F9F9F; font: bold italic 16px Times; position: relative; margin: 0 0 6px; }
+#main.services .service .brief li.title { color: #3E3E3E; font: normal 14px 'Helvetica Neue'; font-style: normal; line-height: 13px; margin: 0 0 20px; }
+
+/* ==!== about content ======= */
+#main.about { padding-bottom: 30px; }
+
+#main.about .border { border-bottom: 1px solid #ccc; }
+#main.about h3 { color: #333; font-size: 50px; letter-spacing: -2px; line-height: 1em; margin: 0; }
+
+#main.about #history { overflow: hidden; }
+#main.about #history img { float: left; }
+#main.about #history h3 { float: right; margin: 0 0 30px; /*width: 540px;*/ width: 100%; }
+#main.about #history p { color: #a0a0a0; float: right; font-family: Times, sans-serif; font-size: 18px; font-style: italic; font-weight: normal; margin: 0 0 30px; /*width: 540px;*/ width: 100%; }
+
+#main.about #teammates { padding: 0 0 10px; overflow: hidden; }
+#main.about #teammates ul { list-style: none; margin: 0; padding: 0; width: 980px; }
+#main.about #teammates ul li { float: left; height: 120px; margin: 0 20px 20px 0; position: relative; width: 120px; }
+#main.about #teammates ul li img { height: 120px; width: 120px; }
+#main.about #teammates ul li p { display: none; }
+#main.about #teammates ul li p small { display: block; font-size: 11px; line-height: 11px; padding-top: 5px; }
+#main.about #teammates ul li p span { border-top: 1px solid #fff; bottom: 0; color: #fff; display: block; font-size: 11px; height: 28px; left: 0; line-height: 28px; position: absolute; text-indent: 10px; width: 120px; }
+#main.about #teammates ul li:hover p { background-color: #F12787; color: #fff; display: block; height: 110px; left: 0; font-size: 20px; line-height: 1em; margin: 0; padding: 10px 10px 0 10px; position: absolute; top: 0; width: 100px; cursor: default; }
+#main.about #teammates ul li.blue:hover p {background-color: #01AEF0;}
+#main.about #teammates ul li.green:hover p {background-color: #3FA639;}
+#main.about #teammates ul li.yellow:hover p {background-color: #FFCC00;}
+
+#main.about #structure { overflow: hidden; padding-bottom: 30px; }
+#main.about #structure h3 { font-size: 50px; margin-bottom: 30px; }
+#main.about #structure p { color: #a0a0a0; float: right; font-family: Times, sans-serif; font-size: 18px; font-style: italic; font-weight: normal; margin: 0 0 16px; width: 469px; }
+#main.about #structure img { float: left; }
+#main.about #structure ul { float: right; list-style: none; margin: 45px 0 0 0; overflow: hidden; padding: 0; width: 469px; }
+#main.about #structure ul li { float: left; margin: 0 32px 30px 0; }
+#main.about #structure ul li.last { margin-right: 0; }
+#main.about #structure ul li img { cursor: pointer; }
+
+#main.about #carrers { overflow: hidden; }
+#main.about #carrers h3 { margin-bottom: 30px; }
+#main.about #carrers h3 big { font-size: 96px; letter-spacing: -6px; line-height: 1em;}
+#main.about #carrers p { color: #a0a0a0; font-family: Times, sans-serif; font-size: 18px; font-style: italic; font-weight: normal; margin: 0 0 30px; }
+#main.about #carrers a { color: #666; font-family: Times; font-style: italic; font-size: 18px; font-weight: normal; text-decoration: none; }
+#main.about #carrers a:hover { color: #ccc; }
+
+#main.about #carrers .top { overflow: hidden; }
+#main.about #carrers .top h3 { float: left; width: 450px; }
+#main.about #carrers .top p { float: right; width: 470px; margin: 10px 0 0 0; }
+#main.about #carrers .top a { display: block; float: left; margin: 40px 0  0 40px; }
+#main.about #carrers .top a:hover .bullet { background-position: -227px -273px;}
+/* ==!== clients content ======= */
+#main.clients { padding-bottom: 30px; }
+#main.clients h3 { font-size: 50px; margin: 0;}
+
+#main.clients p { color: #9f9f9f; font-family: Times, sans-serif; font-size: 18px; font-style: italic;  font-weight: normal; margin: 0;width: 400px; }
+
+#main.clients .scroller { height: 448px;
+overflow: hidden;
+width: 540px;
+position: relative;
+right: 0;
+top: 0;}
+.slides_container {
+			width:470px;
+			display:none;}
+
+		.slides_container div {
+			width:470px;
+			height:170px;
+			display:block;
+		}
+		
+
+		.pagination {
+			list-style:none;
+			margin:0;
+			padding:0;
+		}
+		.pagination .current a {
+			color:red;
+		}
+#main.clients .scroller menu { clear: both; display: block; height: 26px; padding: 0; position: relative; margin: 0px; }
+#main.clients .scroller menu ul { display: block; width: 66px !important; padding: 0; list-style: none; position: relative;  margin: 1px auto 0; }
+#main.clients .scroller menu ul li { display: block; width: 25px !important; height: 24px; padding: 0; border: none; position: relative; float: left; margin: 0 15px 0 0; } 
+#main.clients .scroller menu ul li.last { display: block; width: 25px !important; height: 24px; padding: 0; border: none; position: relative; float: left; margin: 0; } 
+#main.clients .scroller menu ul li a { display: block; width: 25px !important; height: 24px; padding: 0; border: none; position: relative; float: left; margin: 0px; }
+#main.clients .scroller menu ul li a.left-pointer {  background: url(../img/sprite.png) no-repeat -150px -244px;}
+#main.clients .scroller menu ul li a.left-pointer:hover {  background: url(../img/sprite.png) no-repeat -150px -268px; }
+#main.clients .scroller menu ul li a.right-pointer {  background: url(../img/sprite.png) no-repeat -175px -244px; }
+#main.clients .scroller menu ul li a.right-pointer:hover {  background: url(../img/sprite.png) no-repeat -175px -268px;}
+
+#main.clients .scroller ul { list-style: none; margin: 0; padding: 0; position: relative; left: 0px; }
+#main.clients .scroller ul li { border: 5px solid #e5e5e5; float: left; height: 110px; margin: 0 20px 20px 0; width: 110px; }
+#main.clients .scroller ul li a { display: block; height: 110px; width: 110px; cursor:default;}
+#main.clients .scroller ul li a img { height: 110px; width: 110px; }
+
+#main.clients .head {height: 60px;margin: 0 0 14px;width: 960px;}
+
+#main.clients .agency,
+#main.clients .brand {margin-bottom:30px;overflow:hidden;}
+#main.clients .agency .scroller menu ul li:hover,
+#main.clients .brand .scroller menu ul li:hover {border:none;}
+#main.clients .agency .scroller menu ul li a,
+#main.clients .brand .scroller menu ul li a {cursor:pointer;}
+
+/*agency*/
+#main.clients .agency p {float:left;}
+#main.clients .agency .scroller {float:right;}
+#main.clients .agency .scroller ul{width:1120px;}
+#main.clients .agency .scroller ul li:hover {border:5px solid #f06;}
+#main.clients .agency .scroller ul li a {background: url(../img/sprite-agency-internal.png) 0 0 no-repeat;}
+
+/*brand*/
+#main.clients .brand h3 {float:right;}
+#main.clients .brand p {float:right;text-align:right;}
+#main.clients .brand .scroller {float:left;}
+#main.clients .brand .scroller ul {width:3782px;}
+#main.clients .brand .scroller ul li:hover {border:5px solid #01aef0;}
+#main.clients .brand .scroller ul li a {background:url(../img/sprite-client-internal.jpg) 0 0 no-repeat;}
+
+#main.clients .agency .scroller ul li a#africa { background-position: 0 -120px; }
+#main.clients .agency .scroller ul li a#ag2 { background-position:  -120px -120px; }
+#main.clients .agency .scroller ul li a#almap { background-position:  -240px -120px; }
+#main.clients .agency .scroller ul li a#ogilvy { background-position:  -360px -120px; }
+#main.clients .agency .scroller ul li a#borguierh { background-position:  -480px -120px; }
+#main.clients .agency .scroller ul li a#wunderman { background-position:  -600px -120px; }
+#main.clients .agency .scroller ul li a#fnazca { background-position:  -720px -120px; }
+#main.clients .agency .scroller ul li a#fischer { background-position:  -840px -120px; }
+#main.clients .agency .scroller ul li a#wmccann { background-position:  -960px -120px; }
+#main.clients .agency .scroller ul li a#live { background-position:  -1080px -120px; }
+#main.clients .agency .scroller ul li a#cheil { background-position:  -0 -360px; }
+#main.clients .agency .scroller ul li a#w3haus { background-position:  -120px -360px; }
+#main.clients .agency .scroller ul li a#um { background-position:  -240px -360px; }
+#main.clients .agency .scroller ul li a#propeg { background-position:  -360px -360px; }
+#main.clients .agency .scroller ul li a#redant { background-position:  -480px -360px; }
+#main.clients .agency .scroller ul li a#dm9{ background-position: -600px -360px; }
+#main.clients .agency .scroller ul li a#talent { background-position:  -720px -360px; }
+#main.clients .agency .scroller ul li a#grupotv1 { background-position:  -840px -360px; }
+#main.clients .agency .scroller ul li a#agenciaclick { background-position:  -960px -360px; }
+#main.clients .agency .scroller ul li a#b4i { background-position:  -1080px -360px; }
+#main.clients .agency .scroller ul li a#fbiz { background-position:  0 -600px; }
+#main.clients .agency .scroller ul li a#latin { background-position:  -120px -600px; }
+
+#main.clients .agency .scroller ul li a#africa:hover { background-position: 0 0px; }
+#main.clients .agency .scroller ul li a#ag2:hover { background-position:  -120px 0; }
+#main.clients .agency .scroller ul li a#almap:hover { background-position:  -240px 0; }
+#main.clients .agency .scroller ul li a#ogilvy:hover { background-position:  -360px 0; }
+#main.clients .agency .scroller ul li a#borguierh:hover { background-position:  -480px 0; }
+#main.clients .agency .scroller ul li a#wunderman:hover { background-position:  -600px 0; }
+#main.clients .agency .scroller ul li a#fnazca:hover { background-position:  -720px 0; }
+#main.clients .agency .scroller ul li a#fischer:hover { background-position:  -840px 0; }
+#main.clients .agency .scroller ul li a#wmccann:hover { background-position:  -960px 0; }
+#main.clients .agency .scroller ul li a#live:hover { background-position:  -1080px 0; }
+#main.clients .agency .scroller ul li a#cheil:hover { background-position:  -0 -240px; }
+#main.clients .agency .scroller ul li a#w3haus:hover { background-position:  -120px -240px; }
+#main.clients .agency .scroller ul li a#um:hover { background-position:  -240px -240px; }
+#main.clients .agency .scroller ul li a#propeg:hover { background-position:  -360px -240px; }
+#main.clients .agency .scroller ul li a#redant:hover { background-position:  -480px -240px; }
+#main.clients .agency .scroller ul li a#dm9:hover { background-position: -600px -240px; }
+#main.clients .agency .scroller ul li a#talent:hover { background-position:  -720px -240px; }
+#main.clients .agency .scroller ul li a#grupotv1:hover { background-position:  -840px -240px; }
+#main.clients .agency .scroller ul li a#agenciaclick:hover { background-position:  -960px -240px; }
+#main.clients .agency .scroller ul li a#b4i:hover { background-position:  -1080px -240px; }
+#main.clients .agency .scroller ul li a#fbiz:hover { background-position:  0 -480px; }
+#main.clients .agency .scroller ul li a#latin:hover { background-position:  -120px -480px; }
+
+#main.clients .brand .scroller ul li a#peg { background-position: 0 -120px; }
+#main.clients .brand .scroller ul li a#hp { background-position: -120px -120px; }
+#main.clients .brand .scroller ul li a#fiat { background-position: -240px -120px; }
+#main.clients .brand .scroller ul li a#ford { background-position: -360px -120px; }
+#main.clients .brand .scroller ul li a#gatorade { background-position: -480px -120px; }
+#main.clients .brand .scroller ul li a#unilever { background-position: -600px -120px; }
+#main.clients .brand .scroller ul li a#stellaartois { background-position: -720px -120px; }
+#main.clients .brand .scroller ul li a#mastercard { background-position: -840px -120px; }
+#main.clients .brand .scroller ul li a#bradesco { background-position: -960px -120px; }
+#main.clients .brand .scroller ul li a#loreal { background-position: -1080px -120px; }
+#main.clients .brand .scroller ul li a#microsoft { background-position: 0 -360px; }
+#main.clients .brand .scroller ul li a#smirnoff { background-position: -120px -360px; }
+#main.clients .brand .scroller ul li a#centrum { background-position: -240px -360px; }
+#main.clients .brand .scroller ul li a#credicard { background-position: -360px -360px; }
+#main.clients .brand .scroller ul li a#chevrolet { background-position: -480px -360px; }
+#main.clients .brand .scroller ul li a#clear { background-position: -600px -360px; }
+#main.clients .brand .scroller ul li a#pfizer { background-position: -720px -360px; }
+#main.clients .brand .scroller ul li a#heineken { background-position: -840px -360px; }
+#main.clients .brand .scroller ul li a#lg { background-position: -960px -360px; }
+#main.clients .brand .scroller ul li a#converse { background-position: -1080px -360px; }
+#main.clients .brand .scroller ul li a#johnnie { background-position: 0 -600px; }
+#main.clients .brand .scroller ul li a#diageo { background-position: -120px -600px; }
+#main.clients .brand .scroller ul li a#redbull { background-position: -240px -600px; }
+#main.clients .brand .scroller ul li a#reebok { background-position: -360px -600px; }
+#main.clients .brand .scroller ul li a#embratel { background-position: -480px -600px; }
+#main.clients .brand .scroller ul li a#msn { background-position: -600px -600px; }
+#main.clients .brand .scroller ul li a#samsung { background-position: -720px -600px; }
+#main.clients .brand .scroller ul li a#air-asia { background-position: -840px -600px; }
+#main.clients .brand .scroller ul li a#visa { background-position: -960px -600px; }
+#main.clients .brand .scroller ul li a#swatch { background-position: -1080px -600px; }
+#main.clients .brand .scroller ul li a#asics { background-position: 0 -840px; }
+#main.clients .brand .scroller ul li a#bic { background-position: -120px -840px; }
+#main.clients .brand .scroller ul li a#santander { background-position: -240px -840px; }
+#main.clients .brand .scroller ul li a#colgate { background-position: -360px -840px; }
+#main.clients .brand .scroller ul li a#ades { background-position: -480px -840px; }
+#main.clients .brand .scroller ul li a#iguatemi { background-position: -600px -840px; }
+#main.clients .brand .scroller ul li a#dove { background-position: -720px -840px; }
+#main.clients .brand .scroller ul li a#kibon { background-position: -840px -840px; }
+#main.clients .brand .scroller ul li a#lacta { background-position: -960px -840px; }
+#main.clients .brand .scroller ul li a#rbs { background-position: -1080px -840px; }
+#main.clients .brand .scroller ul li a#lifebuoy { background-position: 0 -1080px; }
+#main.clients .brand .scroller ul li a#lola { background-position: -120px -1080px; }
+#main.clients .brand .scroller ul li a#brahma { background-position: -240px -1080px; }
+#main.clients .brand .scroller ul li a#bovap { background-position: -360px -1080px; }
+#main.clients .brand .scroller ul li a#buscape { background-position: -480px -1080px; }
+#main.clients .brand .scroller ul li a#advil { background-position: -600px -1080px; }
+#main.clients .brand .scroller ul li a#nextel { background-position: -720px -1080px; }
+#main.clients .brand .scroller ul li a#olympikus { background-position: -840px -1080px; }
+#main.clients .brand .scroller ul li a#activia { background-position: -960px -1080px; }
+#main.clients .brand .scroller ul li a#pantene { background-position: -1080px -1080px; }
+#main.clients .brand .scroller ul li a#fei { background-position: 0 -1320px; }
+#main.clients .brand .scroller ul li a#conchay { background-position: -120px -1320px; }
+#main.clients .brand .scroller ul li a#doriana { background-position: -240px -1320px; }
+#main.clients .brand .scroller ul li a#cepacol { background-position: -360px -1320px; }
+#main.clients .brand .scroller ul li a#royal { background-position: -480px -1320px; }
+#main.clients .brand .scroller ul li a#rubbermeid { background-position: -600px -1320px; }
+#main.clients .brand .scroller ul li a#graco { background-position: -720px -1320px; }
+#main.clients .brand .scroller ul li a#sbt { background-position: -840px -1320px; }
+#main.clients .brand .scroller ul li a#senac { background-position: -960px -1320px; }
+#main.clients .brand .scroller ul li a#skol { background-position: -1080px -1320px; }
+#main.clients .brand .scroller ul li a#caixa { background-position: 0 -1560px; }
+#main.clients .brand .scroller ul li a#sonhodevalsa { background-position: -120px -1560px; }
+#main.clients .brand .scroller ul li a#sorriso { background-position: -240px -1560px; }
+#main.clients .brand .scroller ul li a#gruporbs { background-position: -360px -1560px; }
+#main.clients .brand .scroller ul li a#gnt { background-position: -480px -1560px; }
+#main.clients .brand .scroller ul li a#turmadamonica { background-position: -600px -1560px; }
+#main.clients .brand .scroller ul li a#azaleia { background-position: -720px -1560px; }
+#main.clients .brand .scroller ul li a#unisinos { background-position: -840px -1560px; }
+#main.clients .brand .scroller ul li a#veja { background-position: -960px -1560px; }
+#main.clients .brand .scroller ul li a#vivo { background-position: -1080px -1560px; }
+#main.clients .brand .scroller ul li a#boticario { background-position: 0px -1800px; }
+#main.clients .brand .scroller ul li a#gol { background-position: -120px -1800px; }
+#main.clients .brand .scroller ul li a#apex { background-position: -240px -1800px; }
+#main.clients .brand .scroller ul li a#folha { background-position: -360px -1800px; }
+#main.clients .brand .scroller ul li a#gossip-girl { background-position: -480px -1800px; }
+#main.clients .brand .scroller ul li a#pomarola { background-position: -600px -1800px; }
+#main.clients .brand .scroller ul li a#vono { background-position: -720px -1800px; }
+#main.clients .brand .scroller ul li a#clube { background-position: -840px -1800px; }
+
+#main.clients .brand .scroller ul li a#peg:hover { background-position: 0 0; }
+#main.clients .brand .scroller ul li a#hp:hover { background-position: -120px 0; }
+#main.clients .brand .scroller ul li a#fiat:hover { background-position: -240px 0; }
+#main.clients .brand .scroller ul li a#ford:hover { background-position: -360px 0; }
+#main.clients .brand .scroller ul li a#gatorade:hover { background-position: -480px 0; }
+#main.clients .brand .scroller ul li a#unilever:hover { background-position: -600px 0; }
+#main.clients .brand .scroller ul li a#stellaartois:hover { background-position: -720px 0; }
+#main.clients .brand .scroller ul li a#mastercard:hover { background-position: -840px 0; }
+#main.clients .brand .scroller ul li a#bradesco:hover { background-position: -960px 0; }
+#main.clients .brand .scroller ul li a#loreal:hover { background-position: -1080px 0; }
+#main.clients .brand .scroller ul li a#microsoft:hover { background-position: 0 -240px; }
+#main.clients .brand .scroller ul li a#smirnoff:hover { background-position: -120px -240px; }
+#main.clients .brand .scroller ul li a#centrum:hover { background-position: -240px -240px; }
+#main.clients .brand .scroller ul li a#credicard:hover { background-position: -360px -240px; }
+#main.clients .brand .scroller ul li a#chevrolet:hover { background-position: -480px -240px; }
+#main.clients .brand .scroller ul li a#clear:hover { background-position: -600px -240px; }
+#main.clients .brand .scroller ul li a#pfizer:hover { background-position: -720px -240px; }
+#main.clients .brand .scroller ul li a#heineken:hover { background-position: -840px -240px; }
+#main.clients .brand .scroller ul li a#lg:hover { background-position: -960px -240px; }
+#main.clients .brand .scroller ul li a#converse:hover { background-position: -1080px -240px; }
+#main.clients .brand .scroller ul li a#johnnie:hover { background-position: 0 -480px; }
+#main.clients .brand .scroller ul li a#diageo:hover { background-position: -120px -480px; }
+#main.clients .brand .scroller ul li a#redbull:hover { background-position: -240px -480px; }
+#main.clients .brand .scroller ul li a#reebok:hover { background-position: -360px -480px; }
+#main.clients .brand .scroller ul li a#embratel:hover { background-position: -480px -480px; }
+#main.clients .brand .scroller ul li a#msn:hover { background-position: -600px -480px; }
+#main.clients .brand .scroller ul li a#samsung:hover { background-position: -720px -480px; }
+#main.clients .brand .scroller ul li a#air-asia:hover { background-position: -840px -480px; }
+#main.clients .brand .scroller ul li a#visa:hover { background-position: -960px -480px; }
+#main.clients .brand .scroller ul li a#swatch:hover { background-position: -1080px -480px; }
+#main.clients .brand .scroller ul li a#asics:hover { background-position: 0 -720px; }
+#main.clients .brand .scroller ul li a#bic:hover { background-position: -120px -720px; }
+#main.clients .brand .scroller ul li a#santander:hover { background-position: -240px -720px; }
+#main.clients .brand .scroller ul li a#colgate:hover { background-position: -360px -720px; }
+#main.clients .brand .scroller ul li a#ades:hover { background-position: -480px -720px; }
+#main.clients .brand .scroller ul li a#iguatemi:hover { background-position: -600px -720px; }
+#main.clients .brand .scroller ul li a#dove:hover { background-position: -720px -720px; }
+#main.clients .brand .scroller ul li a#kibon:hover { background-position: -840px -720px; }
+#main.clients .brand .scroller ul li a#lacta:hover { background-position: -960px -720px; }
+#main.clients .brand .scroller ul li a#rbs:hover { background-position: -1080px -720px; }
+#main.clients .brand .scroller ul li a#lifebuoy:hover { background-position: 0 -960px; }
+#main.clients .brand .scroller ul li a#lola:hover { background-position: -120px -960px; }
+#main.clients .brand .scroller ul li a#brahma:hover { background-position: -240px -960px; }
+#main.clients .brand .scroller ul li a#bovap:hover { background-position: -360px -960px; }
+#main.clients .brand .scroller ul li a#buscape:hover { background-position: -480px -960px; }
+#main.clients .brand .scroller ul li a#advil:hover { background-position: -600px -960px; }
+#main.clients .brand .scroller ul li a#nextel:hover { background-position: -720px -960px; }
+#main.clients .brand .scroller ul li a#olympikus:hover { background-position: -840px -960px; }
+#main.clients .brand .scroller ul li a#activia:hover { background-position: -960px -960px; }
+#main.clients .brand .scroller ul li a#pantene:hover { background-position: -1080px -960px; }
+#main.clients .brand .scroller ul li a#fei:hover { background-position: 0 -1200px; }
+#main.clients .brand .scroller ul li a#conchay:hover { background-position: -120px -1200px; }
+#main.clients .brand .scroller ul li a#doriana:hover { background-position: -240px -1200px; }
+#main.clients .brand .scroller ul li a#cepacol:hover { background-position: -360px -1200px; }
+#main.clients .brand .scroller ul li a#royal:hover { background-position: -480px -1200px; }
+#main.clients .brand .scroller ul li a#rubbermeid:hover { background-position: -600px -1200px; }
+#main.clients .brand .scroller ul li a#graco:hover { background-position: -720px -1200px; }
+#main.clients .brand .scroller ul li a#sbt:hover { background-position: -840px -1200px; }
+#main.clients .brand .scroller ul li a#senac:hover { background-position: -960px -1200px; }
+#main.clients .brand .scroller ul li a#skol:hover { background-position: -1080px -1200px; }
+#main.clients .brand .scroller ul li a#caixa:hover { background-position: 0 -1440px; }
+#main.clients .brand .scroller ul li a#sonhodevalsa:hover { background-position: -120px -1440px; }
+#main.clients .brand .scroller ul li a#sorriso:hover { background-position: -240px -1440px; }
+#main.clients .brand .scroller ul li a#gruporbs:hover { background-position: -360px -1440px; }
+#main.clients .brand .scroller ul li a#gnt:hover { background-position: -480px -1440px; }
+#main.clients .brand .scroller ul li a#turmadamonica:hover { background-position: -600px -1440px; }
+#main.clients .brand .scroller ul li a#azaleia:hover { background-position: -720px -1440px; }
+#main.clients .brand .scroller ul li a#unisinos:hover { background-position: -840px -1440px; }
+#main.clients .brand .scroller ul li a#veja:hover { background-position: -960px -1440px; }
+#main.clients .brand .scroller ul li a#vivo:hover { background-position: -1080px -1440px; }
+#main.clients .brand .scroller ul li a#boticario:hover { background-position: 0px -1680px; }
+#main.clients .brand .scroller ul li a#gol:hover { background-position: -120px -1680px; }
+#main.clients .brand .scroller ul li a#apex:hover { background-position: -240px -1680px; }
+#main.clients .brand .scroller ul li a#folha:hover { background-position: -360px -1680px; }
+#main.clients .brand .scroller ul li a#gossip-girl:hover { background-position: -480px -1680px; }
+#main.clients .brand .scroller ul li a#pomarola:hover { background-position: -600px -1680px; }
+#main.clients .brand .scroller ul li a#vono:hover { background-position: -720px -1680px; }
+#main.clients .brand .scroller ul li a#clube:hover { background-position: -840px -1680px; }
+
+/* ==!== contact us content ======= */
+#main.contactus { padding-bottom: 30px; }
+
+#main.contactus #contact-map {display:block;width:1163px;height:465px;position:relative;margin:0 auto;background:url(../img/map.jpg) 0 0 no-repeat}
+
+#main.contactus #contact-map div.city { cursor:pointer; display: block; width: 38px; height: 43px; padding: 0; position: absolute; z-index: 9000; margin: 0; top: 0px; left: 0px; }
+#main.contactus #contact-map #porto-alegre { top: 325px; left: 349px; z-index: 9100;  }
+#main.contactus #contact-map #pelotas { top: 338px; left: 331px; z-index: 9200; }
+#main.contactus #contact-map #brasilia { top: 285px; left: 343px; }
+#main.contactus #contact-map #sao-paulo { top: 300px; left: 363px; }
+#main.contactus #contact-map #los-angeles { left: 147px; top: 122px;}
+#main.contactus #contact-map #london { left: 500px;top: 55px; }
+#main.contactus #contact-map #sydney { top: 337px; left: 960px; }
+
+#main.contactus #contact-map #rio-de-janeiro { top: 296px; left: 379px; }
+#main.contactus #contact-map #buenos-aires { top: 343px; left: 313px; }
+
+#main.contactus #contact-modal.onSydney {left:771px!important;}
+
+#main.contactus #contact-map .map-mark { display: block; width: 38px; height: 43px; background-position: -38px -304px; }
+#main.contactus #contact-map .map-mark.pink{ display: block; width: 38px; height: 43px; background-position: 0 -304px; }
+#main.contactus #contact-map .map-mark.active { background-position: 0 -304px; z-index: 9999; }
+#main.contactus #contact-map .map-mark:hover { background-position: 0 -304px; }
+
+#main.contactus #contact-map #contact-modal { display: none; width: 143px; padding: 20px 45px 11px 20px; background: #F12787; position: absolute; z-index: 9999; float: left; top: 0px; left: 0px; } 
+#main.contactus #contact-map #contact-modal h3 { display: block; color: #fff; font: bold 18px 'Helvetica Neue'; position: relative; margin: 0; }
+#main.contactus #contact-map #contact-modal span, #main.contactus #contact-map a { display: block; color: #fff; font: normal 12px 'Helvetica Neue'; position: relative; margin: 6px 0 9px; text-decoration: none;}
+#main.contactus #contact-map a:hover {text-decoration: underline;}
+
+#main.contactus #contact-form h2 { display: block; font-size: 50px; letter-spacing: -2px; line-height: 1em; }
+#main.contactus #contact-form a { color: #666; font-family: Times; font-style: italic; font-size: 18px; font-weight: normal; text-decoration: none; }
+#main.contactus #contact-form a:hover .bullet {background-position: -227px -273px;}
+#main.contactus #contact-form a:hover { color: #ccc; }
+#main.contactus #contact-form .left a { visibility: hidden; }
+
+#main.contactus #contact-form .left { float: left; padding: 0; width: 560px; }
+#main.contactus #contact-form .left p { color: #9f9f9f; font-family: Times, sans-serif; font-size: 18px; font-style: italic; font-weight: normal; margin: 0 0 15px; padding: 0 0 0; width: 530px; }
+
+#main.contactus #contact-form .right { float: right; width: 374px; }
+#main.contactus #contact-form .right form { width: 374px; }
+#main.contactus #contact-form .right legend { display: none; }
+
+#main.contactus #contact-form .right input { display: block; width: 355px; height: 34px; position: relative; border: 1px solid #ccc; color: #9f9f9f; font-family: 'Helvetica Neue', sans-serif; font-size: 17px; margin: 0 0 12px; padding: 0 0 0 15px; }
+#main.contactus #contact-form .right textarea { display: block; position: relative; height: 107px; border: 1px solid #ccc; color: #9f9f9f; font-family: 'Helvetica Neue', sans-serif; font-size: 17px; margin: 0 0 32px; padding: 7px 0 0 15px; width: 355px; }
+
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "."; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/* ==|== media queries ====================================================== */
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+/* iPad [portrait + landscape] */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#main {width:1024px!important;background:#fff}
+	#main.contactus {width:1163px!important}
+}
+
+/* iPhone [portrait + landscape] */
+@media only screen and (max-device-width: 480px) {
+	#main {width:980px!important;background:#fff}
+	#main.contactus {width:1163px!important}
+}
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+
+
+
+
+#status{ float: right;font-family: Times;font-style: italic;font-size: 16px;font-weight: bold;margin-top: 3px;}
+.errorinput{border: 2px solid #CC0101 !important;}

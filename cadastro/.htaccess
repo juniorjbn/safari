@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^safari.to/cadastro$ [OR]
+RewriteCond %{HTTP_HOST} ^www.safari.to/cadastro$
+RewriteRule (.*)$ http://www.safari.to/cadastro/fornecedor [R=301,L]
+RewriteRule ^projetoaprovado/?.*$ /cadastro/proposta [R=301,L]

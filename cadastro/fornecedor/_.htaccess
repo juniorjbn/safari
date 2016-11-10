@@ -1,0 +1,6 @@
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^safari.to$ [OR]
+RewriteCond %{HTTP_HOST} ^www.safari.to$
+RewriteRule (.*)$ https://docs.google.com/a/safari.to/spreadsheet/viewform?formkey=dGxlZ09pQlRmaFpoblhjQjlRbzliWmc6MA [R=301,L]

@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow: 
+Disallow: /clientes/
+Disallow: /creative/
+Disallow: /fornecedor/
+Disallow: /homologacao/
+Disallow: /jobs/
+Disallow: /midia/
+Disallow: /mkt/
+Disallow: /safari/
+Disallow: /social/
+Disallow: /tecnologia/
+Disallow: /testes/
+Disallow: /welcome/
+
+Sitemap: http://www.safari.to/sitemap.xml
